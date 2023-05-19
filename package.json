@@ -8,7 +8,7 @@
     "test:debug": "jest",
     "start:client": "serve ./client",
     "start:server": "json-server --watch ./server/db.json --port 3333",
-    "start:prod": "serve ./client json-server --watch ./server/db.json --port 3333"
+    "start:prod": "serve ./client && json-server --watch ./server/db.json --port 3333"
   },
   "keywords": [],
   "author": "",
