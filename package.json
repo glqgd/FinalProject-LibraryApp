@@ -25,5 +25,8 @@
     "json-server": "^0.17.3",
     "serve": "^14.2.0"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "react-scripts": "^5.0.1"
+  }
 }
