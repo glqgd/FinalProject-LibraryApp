@@ -56,7 +56,7 @@ async function handleClickEditButton(bookId) {
     // Ambil data buku dari server berdasarkan id, simpan hasilnya ke variabel currentBook
     // TODO: answer here
     const bookData = await fetchBooks();
-    currentBook = bookData.filter((book) => book.id === bookId)[0];
+    currentBook = bookData.find((book) => book.id === bookId);
     currentPage = "edit";
     loadPage();
   } catch (error) {
@@ -73,8 +73,7 @@ async function handleClickDeleteButton(bookId) {
 
     //panggil function deleteBook dengan parameter bookId
     // TODO: answer here
-    deleteBook(bookId);
-    fetchBooks();
+    await deleteBook(bookId);
     loadPage();
   } catch (error) {
     console.log(error);
@@ -107,10 +106,10 @@ async function handleEditForm(event) {
 
     // panggil function editBook dengan parameter book
     // TODO: answer here
-    editBook(book);
+    await editBook(book);
     currentBook = null;
 
-    fetchBooks();
+    // fetchBooks();
 
     currentPage = "home";
     loadPage();
@@ -145,9 +144,9 @@ async function handleAddForm(event) {
 
     // panggil function addBook dengan parameter book
     // TODO: answer here
-    addBook(book);
+    await addBook(book);
 
-    fetchBooks();
+    // fetchBooks();
 
     currentPage = "home";
     loadPage();
@@ -312,9 +311,7 @@ async function editBook(book) {
       body yang dikirim adalah book yang dikirimkan sebagai parameter function
     */
     // TODO: answer here
-    const bookData = await fetchBooks();
-    const bookId = bookData.filter((data) => data.title === book.title)[0].id;
-    const res = await fetch(`http://localhost:3333/books/${bookId}`, {
+    const res = await fetch(`http://localhost:3333/books/${currentBook.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

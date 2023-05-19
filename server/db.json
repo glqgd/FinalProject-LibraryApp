@@ -1,11 +1,11 @@
 {
   "books": [
     {
+      "id": 1,
       "title": "Laskar Pelangi",
       "author": "Andrea Hirata",
-      "year": "2005",
-      "quantity": "3",
-      "id": 1
+      "year": 2005,
+      "quantity": 3
     },
     {
       "id": 2,
@@ -27,6 +27,13 @@
       "author": "Habiburrahman El Shirazy",
       "year": 2004,
       "quantity": 7
+    },
+    {
+      "id": 5,
+      "title": "Bumi Manusia",
+      "author": "Pramoedya Ananta Toer",
+      "year": 1980,
+      "quantity": 4
     },
     {
       "id": 6,
@@ -64,6 +71,13 @@
       "quantity": 3
     },
     {
+      "id": 11,
+      "title": "Ketika Cinta Bertasbih",
+      "author": "Habiburrahman El Shirazy",
+      "year": 2004,
+      "quantity": 4
+    },
+    {
       "id": 12,
       "title": "Cinta di Dalam Gelas",
       "author": "Andrea Hirata",
@@ -85,25 +99,11 @@
       "quantity": 8
     },
     {
-      "title": "Buku Test",
-      "author": "Test 123",
-      "year": "2023",
-      "quantity": "12",
-      "id": 15
-    },
-    {
-      "title": "Test Lagi",
-      "author": "Budi",
-      "year": "2021",
-      "quantity": "21",
-      "id": 16
-    },
-    {
-      "title": "Buku Test 123",
-      "author": "Susi",
-      "year": "2022",
-      "quantity": "1",
-      "id": 17
+      "id": 15,
+      "title": "Lelaki Harimau",
+      "author": "Eka Kurniawan",
+      "year": 2004,
+      "quantity": 3
     }
   ]
 }
